@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+}
+nav{
+    padding-inline: 3vh;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 2vh;
+}
+nav > ul > div {
+    border-right: 1px solid #e0e0e0;
+}
+
+.my-navbar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2vh;
+    margin-bottom: 2vh;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+.nav-delivery-sec{
+    margin-left: -0.7vw;
+}
+.nav-delivery-sec > div > div > strong{
+    font-weight: 1000;
+    line-height: 1;
+    font-size:125%;
+}
+.nav-delivery-sec > div > div{
+    font-size: smaller;
+}
+
+.nav-logo{
+    height: 100%;
+    padding-top: 1vh;
+    margin-left: -3.7vh;
+}
+.nav-search{
+    background-color: #F8F8F8;
+    width: 42vw;
+    height: fit-content;
+    display: flex;
+    align-content: center;
+    border-radius: 10px;
+    padding: 0.8vh;
+}
+.nav-search-icon{
+    height: 2.5vh;
+    align-self: auto;
+}
+
+.nav-search> input{
+    width: 100%;
+    height: 59%;
+    border: none;
+}
+.Login-btn{
+    font-size: 110%;
+}
+#cart-logo{
+    color: white;
+}
+#cart-logo:hover{
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    animation: shake 1s linear alternate;
+}
+@keyframes shake{
+    0%,25%,50%,75%,100%{
+       transform: rotate(0deg);
+    }12.5%,62.5%{
+       transform: rotate(25deg);
+    }37.5%,87.5%{
+       transform: rotate(-25deg);
+    }
+}
+.responsive-content{
+    display: none;
+}
+.responsive-search-content{
+    display: none;
+}
+
+
+
+.paan-corner{
+    margin-bottom: 2.75vh;
+}
+
+/* scrollable div */
+.scrollable{
+    margin-inline: 8.6vw;
+    column-gap: 1.5vw;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollable::-webkit-scrollbar{
+    display: none;
+}
+
+/* grocery-item section */
+.grocery-div{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    padding-inline: 8vw;
+    margin-top: 1.25vw;
+}
+
+/* item card section */
+.card-container{
+    white-space: nowrap;
+    column-gap: 1vw;
+    display: flex;
+    overflow: auto;
+    padding: auto;
+}
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+.cards{
+   margin-top: 2vh;
+   width:23%;
+   padding: 1vw;
+   border: 1px solid rgba(223, 223, 223, 0.525);
+   border-radius: 10px;
+}
+
+.card-body{
+    font-size: 85%;
+    margin: auto;
+}
+
+
+/* footer */
+.footer-top{
+    padding-inline: 3.5vw;
+    margin-top: 3.5vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    opacity: 0.75;
+}
+
+ul{
+    list-style: none;
+}
+.useful-link-head, .categories-FooterLinks-Header{
+    padding-inline: 2vw;
+    margin-bottom: 2vw;
+    opacity: 3;
+    font-size: large;
+}
+.links-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    column-gap: 3vw;
+
+}
+.Categories-FooterLinks-Container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+        column-gap: 3vw;
+
+}
+.social-container{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 89%;
+    background-color: #eeeeeea5;
+    margin-inline: 7vw;
+    border-radius: 5px;
+    align-items: center;
+}
+.social-logo>div{
+    display: inline;
+    margin-inline: 1vw;
+    justify-self: right;
+}
+@media screen and (max-width: 1020px) and (min-width: 320px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    nav{
+        padding: 5px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    .responsive-content{
+        display: block;
+    }
+    .responsive-search-content{
+            background-color: #F8F8F8;
+            width: 98vw;
+            height: fit-content;
+            display: flex;
+            align-content: center;
+            border-radius: 10px;
+            padding: 0.8vh;
+    }
+    .responsive-search-content > input{
+        width: 100%;
+        height: 59%;
+        border: none;
+    }
+    .responsive-search-icon{
+        height: 2.5vh;
+        align-self: auto;
+    }
+    .nav-delivery-sec{
+        position: absolute;
+    }
+    .nav-logo, .Login-btn, .nav-cart, .nav-search, .hero{
+        display: none;
+    }
+
+    .grocery-div-section{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .grocery-div-section > .grocery-div{
+        width: 100%;
+        grid-template-columns: repeat(5, 2fr);
+    }
+    .grocery-div > .grocery-div-items > img{
+        width: fit-content;
+        flex-grow: 3;
+    }
+
+    .social-container,.footer-top,.footer-2nd,.links-container,.useful-link-head{
+        display: none;
+    }
+    .mysec{
+        display: block;
+    }
+
+    .card-items,.card-body,.card-image,.prod-name,.price-btn,.add-btn{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .grocery-div-section{
+        display: flex;
+        flex-wrap: wrap;
+        width: 95vw;
+        margin: auto;
+    }
+    .grocery-div-section > .grocery-div{
+        grid-template-columns: repeat(4, 2fr);
+    }
+}
